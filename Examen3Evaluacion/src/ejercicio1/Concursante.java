@@ -1,10 +1,24 @@
-package logica;
+package ejercicio1;
 
-public class DatosEurovision {
+public class Concursante {
+	//Atributos
 	private String cancion;
 	private String pais;
 	private String interprete;
 	private int puntuacion;
+		
+	/**
+	 * @param cancion
+	 * @param pais
+	 * @param interprete
+	 * @param puntuacion
+	 */
+	public Concursante(String pais, String interprete, String cancion, int puntuacion) {
+		this.cancion = cancion;
+		this.pais = pais;
+		this.interprete = interprete;
+		this.puntuacion = puntuacion;
+	}
 	/**
 	 * @return the cancion
 	 */
@@ -53,7 +67,13 @@ public class DatosEurovision {
 	public void setPuntuacion(int puntuacion) {
 		this.puntuacion = puntuacion;
 	}
-	
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Concursante cancion=" + cancion + ", pais=" + pais
+				+ ", interprete=" + interprete + ", puntuacion=" + puntuacion;
+	}
 	
 }
